@@ -1,0 +1,123 @@
+html {font-size: 16pt;}
+body {}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background: white;
+    font-size: 1.6rem;
+}   
+
+.navbar {
+    margin: 0.6rem 0.5rem;
+    font-family: articulat-cf, sans-serif;
+    font-style: normal;
+}
+
+.navbarLogo {
+    font-weight: 700;
+    margin: 0.4rem;
+}
+
+.navbarMenu {
+    font-weight: 300;
+    display: flex;
+    padding-left: 0.2rem;
+}
+
+.navbarMenu :hover {
+    animation: hoverAnimate 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.navbarBtn {
+    display: none;
+    position: absolute;
+    right: 0.6rem;
+    margin: 0.4rem;
+}
+
+.navbarMenu li {padding: 0.2rem 0.4rem;}
+
+section {}
+footer {}
+
+.notice {
+    position: absolute;
+    display: inline-block;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 10px 6px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.slide {
+    display: flex;
+    width: 100vw;
+    height: 75vh;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.index {
+  min-width: auto;
+  max-width: 500vw;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow: visible;
+  font-size: 50vw;
+  margin-right: 1vh;
+}
+
+.index:hover {
+    animation: hoverAnimate 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes hoverAnimate {100% {color:greenyellow;}}
+
+.slide::-webkit-scrollbar {display: none;}
+
+.blink {animation: blink-effect 3s cubic-bezier(0.65, 0, 0.35, 1) infinite;}
+@keyframes blink-effect {50% {opacity: 0;}}
+
+.notice a span:nth-child(1) {color: skyblue;}
+.notice a:hover span:nth-child(1) {display: none;}
+.notice a span:nth-child(2) {display: none;}
+.notice a:hover span:nth-child(2) {
+    display: inline;
+    color: skyblue;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    line-height: 1.2;
+        }
+
+#wrapper {display: table;}
+.codePlace {display: table-cell; vertical-align: middle;}
+
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbarMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbarMenu li {padding: 0.7rem 0.4rem;}
+    .navbarMenu.active {display: flex;}
+    .navbarBtn {display: inline;}
+}
