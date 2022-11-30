@@ -3,6 +3,16 @@ let rules = {
   "F": "FF"
 }
 
+let rules2 = {
+  "X": "F+[-F-XF-X][+FF][--XF[+X]][++F-X]']",
+  "F": "FF"
+}
+
+let rules3 = {
+  "X": "F[+F][-F[-F]F]F[+F][-F]",
+  "F": "F"
+}
+
 let len = 0.3;
 let ang;
 let drawRules;
